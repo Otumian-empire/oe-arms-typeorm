@@ -71,30 +71,9 @@ export const tenantCreateRequestBody = Joi.object().keys({
       message: PREVIOUS_ADDRESS_REQUIRED,
     })
     .required(),
-  kinFullName: Joi.string()
-    .trim()
-    .rule({
-      message: `Kin's ${FULL_NAME_REQUIRED}`,
-    })
-    .required(),
-  kinEmail: Joi.string()
-    .email()
-    .trim()
-    .rule({
-      message: `Kin's ${EMAIL_REQUIRED}`,
-    })
-    .required(),
-  kinPhone: Joi.string()
-    .trim()
-    .rule({
-      message: `Kin's ${PHONE_REQUIRED}`,
-    })
-    .required(),
 });
 
 export const tenantUpdateRequestBody = Joi.object().keys({
   email: Joi.string().email().trim(),
   phone: Joi.string().trim(),
-  kinEmail: Joi.string().email().trim(),
-  kinPhone: Joi.string().trim(),
 });
