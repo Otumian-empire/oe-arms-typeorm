@@ -12,6 +12,5 @@ AppDataSource.initialize()
     });
   })
   .catch((error) => {
-    console.log(error);
     logger.error(error.message);
   });
